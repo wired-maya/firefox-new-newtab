@@ -73,6 +73,8 @@ function loadFeed(feed, url, title) {
     xhr.send();
 }
 
-loadFeed("rss-feed-left", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fkotaku.com%2Frss', "Kotaku");
-loadFeed("rss-feed-middle", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rockpapershotgun.com%2Ffeed%2Fnews', "Rock Paper Shotgun");
-loadFeed("rss-feed-right", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.vg247.com%2Ffeed', "VG247");
+loadFeed("rss-feed-1", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fkotaku.com%2Frss', "Kotaku");
+loadFeed("rss-feed-2", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rockpapershotgun.com%2Ffeed%2Fnews', "Rock Paper Shotgun");
+loadFeed("rss-feed-3", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.vg247.com%2Ffeed', "VG247");
+loadFeed("rss-feed-4", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.gameinformer.com%2Fnews.xml', "Game Informer");
+loadFeed("rss-feed-5", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
