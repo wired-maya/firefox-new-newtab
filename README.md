@@ -1,7 +1,8 @@
 # Firefox New-Newtab
+
 An open source custom new tab in HTML, intended for firefox but theoretically can be used for any browser.
 
-## How to customize (TODO: MAKE THIS POSSIBLE FROM THE UI, ALSO FROM JSON FILE):
+## How to customize (TODO: Make this possible from the UI, also from Json file):
 
 ### Layout, welcome name
 
@@ -16,7 +17,7 @@ An open source custom new tab in HTML, intended for firefox but theoretically ca
 
 - All these images are in the `imgs` folder, switch them out to your preference
 
-### Add/remove/edit search engines (TODO: SIMPLIFY):
+### Add/remove/edit search engines (TODO: Simplify):
 
 #### Add/edit search engine
 
