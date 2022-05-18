@@ -1,0 +1,189 @@
+:root {
+    --text: #FFFFFF;
+    --accent: #CD23B9;
+    --backgroundtext: #730064;
+    --itembackground: #3B0034;
+    --background: #1D0021;
+}
+
+@font-face {
+    font-family: "Caskaydia";
+    src: url("fonts/Caskaydia Cove PL Regular Nerd Font Complete.ttf");
+}
+
+body {
+    background-color: var(--background);
+}
+
+.profile-text {
+    color: var(--text);
+    font-family: "Caskaydia";
+    text-align: center;
+}
+
+.profile {
+    margin: auto;
+    padding-top: 20px;
+}
+
+.profile-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.search {
+    margin: auto;
+    text-align: center;
+    background-color: var(--itembackground);
+    border-radius: 18px;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 9px;
+}
+
+.search:focus {
+    border: 3px solid var(--accent);
+}
+
+.search-box {
+    outline: none;
+    caret-color: var(--accent);
+    color: var(--text);
+    height: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    font-family: "Caskaydia";
+}
+
+::placeholder {
+    color: var(--accent);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    outline: none;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color: transparent;
+}
+
+.dropdown-button-google {
+    background-image: url("imgs/logos/google\ logo.png");
+}
+
+.dropdown-button-arch-wiki {
+    background-image: url("imgs/logos/arch\ logo.png");
+}
+
+.dropdown-button-internet-archive {
+    background-image: url("imgs/logos/internet\ archive\ logo.png");
+}
+
+.dropdown-button-wayback-machine {
+    background-image: url("imgs/logos/wayback\ machine\ logo.png");
+}
+
+.dropdown-button-wikipedia {
+    background-image: url("imgs/logos/wikipedia\ logo.png");
+}
+
+.dropdown-button-wikimedia-commons {
+    background-image: url("imgs/logos/wikimedia\ commons\ logo.png");
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--itembackground);
+    width: 50px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+.dropdown-item {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--accent);
+}
+  
+a:visited {
+    color: var(--backgroundtext);
+}
+
+.rss-container {
+    display: flex;
+    margin: 0% 20%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.rss-feed {
+    width: 33%;
+}
+
+.feed-title {
+    font-family: "Caskaydia";
+    text-align: center;
+    color: var(--text);
+    font-size: 1em;
+}
+
+.feed-card {
+    background-color: var(--itembackground);
+    border-radius: 18px;
+    padding: 9px;
+    margin: 9px;
+    display: inline-block;
+}
+
+.feed-card img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    display: block;
+    border-radius: 18px;
+    object-fit: scale-down;
+}
+
+.feed-card-title {
+    font-family: "Caskaydia";
+    font-size: 1em;
+}
+
+.feed-card-desc {
+    font-family: "Caskaydia";
+    color: var(--text);
+    font-size: 0.80em;
+}

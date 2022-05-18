@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="profile">
+        <img src="imgs/pfp.png" alt="You ❤️" class="profile-img">
+        <h1 class="profile-text">Hello, Maya</h1>
+    </div>
+
+    <div id="search" class="search">
+        <div class="dropdown">
+            <button class="dropdown-button" id="selector-button">#</button>
+            <div class="dropdown-content">
+                <button class="dropdown-button dropdown-button-google" id="selector-button-google">#</button>
+                <button class="dropdown-button dropdown-button-arch-wiki" id="selector-button-arch-wiki">#</button>
+                <button class="dropdown-button dropdown-button-internet-archive" id="selector-button-internet-archive">#</button>
+                <button class="dropdown-button dropdown-button-wayback-machine" id="selector-button-wayback-machine">#</button>
+                <button class="dropdown-button dropdown-button-wikipedia" id="selector-button-wikipedia">#</button>
+                <button class="dropdown-button dropdown-button-wikimedia-commons" id="selector-button-wikimedia-commons">#</button>
+            </div>
+        </div>
+        <input type="search" id="query" name="q" class="search-box">
+    </div>
+
+    <div class="rss-container">
+        <div id="rss-feed-left" class="rss-feed"></div>
+        <div id="rss-feed-middle" class="rss-feed"></div>
+        <div id="rss-feed-right" class="rss-feed"></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="rss feed.js"></script>
+</body>
+
+</html>
