@@ -20,7 +20,10 @@ function loadFeed(feed, url, title) {
                 for (var i = 0, t = data.items.length; i < t; ++i) {
                     var item = data.items[i];
                     var itemContainer = document.createElement('DIV');
+                    var itemTextContainer = document.createElement('DIV');
+                    
                     itemContainer.classList.add("feed-card");
+                    itemTextContainer.classList.add("feed-card-text");
 
                     var itemThumbnailElement = document.createElement('IMG')
                     var itemTitleElement = document.createElement('H2');
@@ -40,9 +43,11 @@ function loadFeed(feed, url, title) {
                     // Removes first image from description so it can be used as thumbnails instead, then makes "Read more" uniform
                     itemDescriptionElement.innerHTML = item.description.replace(/<img[^>]*>/, "").replace("Read more...", "Read More");
 
+                    itemTextContainer.appendChild(itemTitleElement);
+                    itemTextContainer.appendChild(itemDescriptionElement);
+
                     itemContainer.appendChild(itemThumbnailElement);
-                    itemContainer.appendChild(itemTitleElement);
-                    itemContainer.appendChild(itemDescriptionElement);
+                    itemContainer.appendChild(itemTextContainer);
 
                     itemsContainer.appendChild(itemContainer);
 

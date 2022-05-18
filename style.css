@@ -167,9 +167,12 @@ a:visited {
 .feed-card {
     background-color: var(--itembackground);
     border-radius: var(--corner-rounding);
-    padding: 9px;
     margin: 9px;
     display: inline-block;
+}
+
+.feed-card-text {
+    padding: 9px;
 }
 
 .feed-card img {
@@ -177,7 +180,8 @@ a:visited {
     width: 100%;
     margin: 0;
     display: block;
-    border-radius: var(--corner-rounding);
+    border-top-left-radius: var(--corner-rounding);
+    border-top-right-radius: var(--corner-rounding);
     object-fit: scale-down;
 }
 
