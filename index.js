@@ -1,6 +1,8 @@
 // Get required elements
 const searchQuery = document.getElementById('query');
 const selectorButton = document.getElementById('selector-button');
+
+// Search engine options
 const selectorButtonGoogle = document.getElementById('selector-button-google');
 const selectorButtonArchWiki = document.getElementById('selector-button-arch-wiki');
 const selectorButtonInternetArchive = document.getElementById('selector-button-internet-archive');
@@ -69,6 +71,8 @@ function changeSelectedSearchEngine(event) {
 
 // Add necessary event listeners
 searchQuery.addEventListener("keypress", performSearch);
+
+// Search engine listeners
 selectorButtonGoogle.addEventListener('click', changeSelectedSearchEngine);
 selectorButtonArchWiki.addEventListener('click', changeSelectedSearchEngine);
 selectorButtonInternetArchive.addEventListener('click', changeSelectedSearchEngine);
