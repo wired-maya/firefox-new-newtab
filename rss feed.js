@@ -4,6 +4,10 @@ function strip(html) {
     return doc.body.textContent || "";
 }
 
+// TODO: Add text truncating, make the thumbnail a separate class so subsequent images aren't rounded at the top
+//       Make this function async, add "Error" cards and "empty" cards
+//       Try no descriptions?
+//       Make RSS2JSON conversion automatic
 function loadFeed(feed, url, title) {
     var content = document.getElementById(feed);
 

@@ -1,3 +1,5 @@
+// TODO: Rename this file, and simplify process of adding/editing/removing search engines
+
 // Get required elements
 const searchQuery = document.getElementById('query');
 const selectorButton = document.getElementById('selector-button');
