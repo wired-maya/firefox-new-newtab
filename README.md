@@ -2,7 +2,7 @@
 
 An open source custom new tab in HTML, intended for firefox but theoretically can be used for any browser.
 
-## How to customize (TODO: Make this possible from the UI, also from Json file):
+## How to customize:
 
 ### Layout, welcome name
 
@@ -17,7 +17,7 @@ An open source custom new tab in HTML, intended for firefox but theoretically ca
 
 - All these images are in the `imgs` folder, switch them out to your preference
 
-### Add/remove/edit search engines (TODO: Simplify):
+### Add/remove/edit search engines:
 
 #### Add/edit search engine
 
@@ -65,13 +65,13 @@ function changeSelectedSearchEngine(event) {
 }
 ```
 
-### Edit RSS feed sources (TODO: Make the rss2json conversion automatic)
+### Edit RSS feed sources:
 
 1. Find your chosen RSS feed, preferably one with a format resembling the defalt ones
 2. Go to https://rss2json.com and get your converted URL
 3. Edit one of the 3 `loadFeed()` functions, replacing the URL to what you created earlier, and adding a title of choice (RSS feeds already have their own titles, this is just to make the titles shorter and cleaner)
 
-## How to set your Firefox newtab to an HTML file:
+## How to set your Firefox newtab to an HTML file (Working on Firefox 100.1):
 
 1. Create `enable-autoconfig.js` in `FIREFOX PROGRAM FOLDER/defaults/pref/`, and paste in the below code (the first line needs to start with `//`)
 
