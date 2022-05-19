@@ -179,13 +179,24 @@ a:visited {
     padding: 9px;
 }
 
-.feed-card img {
+img[class^="image-style-"] {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    display: block;
+    border-radius: var(--corner-rounding);
+    object-fit: scale-down;
+}
+
+.feed-card-thumbnail {
     max-width: 100%;
     width: 100%;
     margin: 0;
     display: block;
     border-top-left-radius: var(--corner-rounding);
     border-top-right-radius: var(--corner-rounding);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     object-fit: scale-down;
 }
 

@@ -4,9 +4,9 @@ function strip(html) {
     return doc.body.textContent || "";
 }
 
-// TODO: Add text truncating, make the thumbnail a separate class so subsequent images aren't rounded at the top
+// TODO: Add text truncating, make all the cards the same consistent size
 //       Make this function async, add "Error" cards and "empty" cards
-//       Try no descriptions?
+//       Try no descriptions? -> It is good, add this back as an option later
 //       Make RSS2JSON conversion automatic
 function loadFeed(feed, url, title) {
     var content = document.getElementById(feed);
@@ -30,6 +30,9 @@ function loadFeed(feed, url, title) {
                     itemTextContainer.classList.add("feed-card-text");
 
                     var itemThumbnailElement = document.createElement('IMG')
+                    itemThumbnailElement.classList.add("feed-card-thumbnail")
+                    itemThumbnailElement.setAttribute('src', item.thumbnail);
+
                     var itemTitleElement = document.createElement('H2');
                     var itemLinkElement = document.createElement('A');
                     var itemDescriptionElement = document.createElement('P');
@@ -38,14 +41,12 @@ function loadFeed(feed, url, title) {
                     itemLinkElement.classList.add("feed-card-link");
                     itemDescriptionElement.classList.add("feed-card-desc");
 
-                    itemThumbnailElement.setAttribute('src', item.thumbnail);
-
                     itemLinkElement.setAttribute('href', item.link);
                     itemLinkElement.innerText = item.title;
                     itemTitleElement.appendChild(itemLinkElement);
 
                     // Removes first image from description so it can be used as thumbnails instead, then makes "Read more" uniform
-                    itemDescriptionElement.innerHTML = item.description.replace(/<img[^>]*>/, "").replace("Read more...", "Read More");
+                    // itemDescriptionElement.innerHTML = item.description.replace(/<img[^>]*>/, "").replace("Read more...", "Read More");
 
                     itemTextContainer.appendChild(itemTitleElement);
                     itemTextContainer.appendChild(itemDescriptionElement);
