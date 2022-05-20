@@ -145,7 +145,7 @@ a {
 a:link {
     color: var(--accent);
 }
-  
+
 a:visited {
     color: var(--backgroundtext);
 }
@@ -209,4 +209,38 @@ img[class^="image-style-"] {
     font-family: var(--main-font);
     color: var(--text);
     font-size: 0.80em;
+}
+
+.spinner {
+    margin: auto;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid var(--accent);
+    border-right: 3px solid var(--background);
+    border-bottom: 3px solid var(--itembackground);
+    border-left: 3px solid var(--backgroundtext);
+    width: 10%;
+    padding-top: 10%;
+    -webkit-animation: spin 1s ease infinite;
+    animation: spin 1s ease infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

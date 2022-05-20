@@ -8,6 +8,8 @@ function strip(html) {
 //       Make this function async, add "Error" cards and "empty" cards
 //       Try no descriptions? -> It is good, add this back as an option later
 //       Make RSS2JSON conversion automatic
+//       Make cards themselves clickable for links, instead of just the title
+//       Make this an async fetch function
 function loadFeed(feed, url, title) {
     var content = document.getElementById(feed);
 
@@ -58,13 +60,13 @@ function loadFeed(feed, url, title) {
 
                 }
 
-                var titleElement = document.createElement('H1');
-                titleElement.classList.add("feed-title");
+                // var titleElement = document.createElement('H1');
+                // titleElement.classList.add("feed-title");
                 // titleElement.innerText = data.feed.title;
-                titleElement.innerText = title;
+                // titleElement.innerText = title;
 
-                content.appendChild(titleElement);
-                content.appendChild(itemsContainer);
+                // content.appendChild(titleElement);
+                content.replaceChildren(itemsContainer);
             }
 
             console.log(data);
@@ -78,8 +80,8 @@ function loadFeed(feed, url, title) {
     xhr.send();
 }
 
-loadFeed("rss-feed-1", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fkotaku.com%2Frss', "Kotaku");
-loadFeed("rss-feed-2", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rockpapershotgun.com%2Ffeed%2Fnews', "Rock Paper Shotgun");
-loadFeed("rss-feed-3", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.vg247.com%2Ffeed', "VG247");
-loadFeed("rss-feed-4", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.gameinformer.com%2Fnews.xml', "Game Informer");
-loadFeed("rss-feed-5", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
+loadFeed("rss-feed-1-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fkotaku.com%2Frss', "Kotaku");
+loadFeed("rss-feed-2-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rockpapershotgun.com%2Ffeed%2Fnews', "Rock Paper Shotgun");
+loadFeed("rss-feed-3-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.vg247.com%2Ffeed', "VG247");
+loadFeed("rss-feed-4-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.gameinformer.com%2Fnews.xml', "Game Informer");
+loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
