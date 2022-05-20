@@ -84,4 +84,6 @@ loadFeed("rss-feed-1-content", 'https://api.rss2json.com/v1/api.json?rss_url=htt
 loadFeed("rss-feed-2-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rockpapershotgun.com%2Ffeed%2Fnews', "Rock Paper Shotgun");
 loadFeed("rss-feed-3-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.vg247.com%2Ffeed', "VG247");
 loadFeed("rss-feed-4-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.gameinformer.com%2Fnews.xml', "Game Informer");
-loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
+// Change to siliconera RSS feed if this doesn't update enough
+// loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
+loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.siliconera.com%2Ffeed%2F', "Siliconera");
