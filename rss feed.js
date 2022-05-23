@@ -87,3 +87,4 @@ loadFeed("rss-feed-4-content", 'https://api.rss2json.com/v1/api.json?rss_url=htt
 // Change to siliconera RSS feed if this doesn't update enough
 // loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstore.steampowered.com%2Ffeeds%2Fnewreleases.xml', "New Releases");
 loadFeed("rss-feed-5-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.siliconera.com%2Ffeed%2F', "Siliconera");
+loadFeed("rss-feed-6-content", 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rpgsite.net%2Ffeed', "RPG Site");
