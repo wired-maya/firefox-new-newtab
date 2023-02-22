@@ -33,6 +33,10 @@ function loadFeed(feed, url, title) {
 
                     var itemThumbnailElement = document.createElement('IMG')
                     itemThumbnailElement.classList.add("feed-card-thumbnail")
+                    if (item.thumbnail == "") {
+                        let img = item.content.match(/src\s*=\s*"(.+?)"/)[0];
+                        item.thumbnail = img.substring(5, img.length - 1);
+                    }
                     itemThumbnailElement.setAttribute('src', item.thumbnail);
 
                     var itemTitleElement = document.createElement('H2');
